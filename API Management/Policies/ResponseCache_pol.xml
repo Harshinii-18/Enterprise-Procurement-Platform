@@ -1,0 +1,10 @@
+<ResponseCache async="false" continueOnError="false" enabled="true" xmlns="http://www.sap.com/apimgmt"> <CacheKey>
+        <KeyFragment ref="request.uri"/> 
+        <KeyFragment ref="request.verb"/> 
+    </CacheKey> 
+    <ExpirySettings> 
+        <TimeoutInSeconds>300</TimeoutInSeconds> 
+    </ExpirySettings>
+    <SkipCacheLookup> request.header.InvalidateCache = "true" </SkipCacheLookup>
+    <SkipCachePopulation> request.verb != "GET" </SkipCachePopulation> 
+</ResponseCache>

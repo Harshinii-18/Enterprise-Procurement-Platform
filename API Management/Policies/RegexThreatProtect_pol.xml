@@ -1,0 +1,30 @@
+<RegularExpressionProtection async="false" continueOnError="false" enabled="true" xmlns="http://www.sap.com/apimgmt">
+	<IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <URIPath>
+    <!-- Literal -->
+    <Pattern>(?i).*(&lt;script).*</Pattern>
+    <!-- URL Encoded -->
+    <Pattern>(?i).*%3[cC]script.*</Pattern>
+    <!-- javascript: -->
+    <Pattern>(?i).*javascript:.*</Pattern>
+    <!-- Path Traversal -->
+    <Pattern>.*\.\./.*</Pattern>
+    <!-- Encoded Path Traversal -->
+    <Pattern>(?i).*%2[eE]%2[eE].*</Pattern>
+    <!-- SQL Injection -->
+    <Pattern>(?i).*union\s+select.*</Pattern>
+    <Pattern>(?i).*drop\s+table.*</Pattern>
+    <!-- HTML -->
+    <Pattern>(?i).*(&lt;img).*</Pattern>
+    <Pattern>(?i).*(&lt;iframe).*</Pattern>
+    <!-- URL Encoded HTML -->
+    <Pattern>(?i).*%3[cC]img.*</Pattern>
+    <Pattern>(?i).*%3[cC]iframe.*</Pattern>
+</URIPath>
+<QueryParam name="id">
+    <Pattern>(?i).*(&lt;script).*</Pattern>
+    <Pattern>.*\.\./.*</Pattern>
+    <Pattern>(?i).*union\s+select.*</Pattern>
+    <Pattern>(?i).*drop\s+table.*</Pattern>
+</QueryParam>
+</RegularExpressionProtection>

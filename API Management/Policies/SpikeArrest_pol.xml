@@ -1,0 +1,6 @@
+<!-- This policy throttles the number of requests processed by an API Proxy protecting against performance lags and downtime -->
+<SpikeArrest async="true" continueOnError="false" enabled="true" xmlns="http://www.sap.com/apimgmt">
+	<Identifier ref="verifyapikey.VerifyAPIKey_pol.developer.app.id"/>
+	<Rate>20pm</Rate>
+	<UseEffectiveCount>true</UseEffectiveCount>
+</SpikeArrest>

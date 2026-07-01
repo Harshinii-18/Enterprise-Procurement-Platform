@@ -1,0 +1,16 @@
+<!-- can be used to create custom messages in case of an error condition -->
+<RaiseFault async="true" continueOnError="false" enabled="true" xmlns="http://www.sap.com/apimgmt">
+
+	<FaultResponse>
+        <Set>
+            <Payload contentType="application/json">
+                {"error":"Invalid Purchase Order ID"}
+            </Payload>
+            <StatusCode>400</StatusCode>
+            <ReasonPhrase>Bad Request</ReasonPhrase>
+
+        </Set>
+    </FaultResponse>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>
+
