@@ -70,32 +70,40 @@ SAP Cloud Integration performs backend routing and orchestration.
 
 ---
 
-# Enterprise APIs
+# API Endpoints
+
+**Base Path**
+
+```
+/api
+```
 
 ## Procurement API
 
-- GET Purchase Orders
-- GET Purchase Order by ID
-- GET Materials
-- GET Business Partners
-- POST Create Purchase Order
-
----
+| Method | Endpoint |
+|--------|----------|
+| GET | `/procurement/purchase-orders` |
+| GET | `/procurement/purchase-orders/{id}` |
+| GET | `/procurement/materials` |
+| GET | `/procurement/business-partners` |
+| POST | `/procurement/purchase-orders` |
 
 ## Supplier API
 
-- GET Suppliers
-- GET Supplier by ID
-- GET Contracts
-- POST Create Supplier
-
----
+| Method | Endpoint |
+|--------|----------|
+| GET | `/suppliers/suppliers` |
+| GET | `/suppliers/suppliers/{id}` |
+| GET | `/suppliers/contracts` |
+| POST | `/suppliers/suppliers` |
 
 ## Employee API
 
-- GET Employees
-- GET Employee by ID
-- GET Departments
+| Method | Endpoint |
+|--------|----------|
+| GET | `/employees/employees` |
+| GET | `/employees/employees/{id}` |
+| GET | `/employees/departments` |
 
 ---
 
